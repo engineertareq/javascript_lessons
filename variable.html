@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Variable With Var</h2>
+     <div id="display"></div>
+    <script>
+        var name = "karimul";
+        var name = "Sajjadul"
+        // document.write is used to print same place (object)
+        document.getElementById("display").innerHTML = name;
+        //if we use getelement by id we have to call it upper of section
+        let age = 50;
+        age = 50;
+        document.write(age + "<br>")
+     
+        const year = 2025;
+        // year = 2026; can't re declear - will provide error - can be chacked on browser inspection >> console
+        document.write(year)
+
+    </script>
+</body>
+</html>
