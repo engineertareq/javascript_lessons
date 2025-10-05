@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Registration Form</h3>
+    <form action="" name="reg">
+        Name: <br>
+        <input type="text" name="name" placeholder="Enter Your Name"><br>
+        Gender: <br>
+        <input type="radio" name="gender" value="male">Male 
+        <input type="radio" name="gender" value="female">Female <br>
+        District: <br>
+        <select name="district">
+            <option value="">Select One</option>
+            <option value="Dhaka">Dhaka</option>
+            <option value="Comilla">Comilla</option>
+            <option value="Chandpur">Chandpur</option>
+            <option value="Feni">Feni</option>
+            <option value="Sylhet">Sylhet</option>
+            <option value="Khulna">Khulna</option>
+        </select> <br>
+        Address: <br>
+        <textarea name="address" placeholder="Enter Address"></textarea><br>
+        <button onclick="form_handle()" type="button">Submit</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+        function form_handle() {
+            let personname = document.reg.name.value;
+            let person_gender = document.reg.gender.value;
+            let person_district = document.reg.district.value;
+            let person_address = document.reg.address.value;
+
+let output = "The Person Name is: " + personname + "<br>" +
+                         "The Person Gender is: " + person_gender + "<br>" +
+                         "The Person District is: " + person_district + "<br>" +
+                         "The Person Address is: " + person_address + "<br>";
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
