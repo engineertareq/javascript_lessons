@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email-Validation</title>
+</head>
+<body>
+    <!-- Things We Need to validate email -->
+    <h3>Email Validation</h3>
+    <form action="" name="myform">
+        <input type="text" name="email" placeholder="Enter Your Email"><br>
+        <input type="text" name="conf_email" placeholder="Enter Your Email"><br>
+        <input type="button" value="Submit" onclick="validationCheck()"><br>
+    </form>
+
+    <script>
+    function validationCheck() {
+        let pattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/;
+        let email = document.myform.email.value;
+        let confirm_email = document.myform.conf_email.value;
+
+        if (email.search(pattern) == -1) {
+            alert("The email is invalid");
+        } else if (email !== confirm_email) {
+            alert("Emails don't match");
+        } else {
+            alert("The email is valid");
+        }
+    }
+</script>
+
+
+     </body>
+</html>
