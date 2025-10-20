@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Login Form</h3>
+    <form action="" name="loginForm">
+        <input type="text" name="fullname" placeholder="Enter Your Name"><br>
+    <input type="password" name="password" placeholder="Enter Password"><br>
+    <input type="password" name="conf_password" placeholder="Enter Password Again"><br>
+    <button type="button" onclick="loginValidation()">Login</button>
+    </form>
+
+    <script>
+        function loginValidation(){
+           let fullname = document.loginForm.fullname.value;
+           let password = document.loginForm.password.value;
+           let conf_password = document.loginForm.conf_password.value;
+
+           let errMessege="";
+
+           if(fullname==""){
+            errMessege += ("Name Can\'t be Empty<br>")
+           } 
+           else if(fullname.length<5){
+            errMessege += ("Name Must be more then 5 character<br>")
+           }
+           if(password==""){
+            errMessege += ("Enter Password<br>")
+           }
+           else if(password.length<9){
+            errMessege += ("Passowrd Must be more then 8 character<br>")
+           }
+           if(conf_password==""){
+            errMessege += ("Enter Confirm Password<br>");
+           }
+           else if(conf_password.length<9){
+            errMessege += ("Passowrd Must be more then 8 character<br>")
+           }
+           else if(password!==conf_password){
+             errMessege += ("Password Dosen't Match<br>")
+           }
+           else{
+            errMessege += ("Validation Successfull<br>")
+           }
+
+           document.getElementById("ErrorMessege").innerHTML = errMessege;
+        }
+    </script>
+    <div id="ErrorMessege"></div>
+</body>
+</html>
