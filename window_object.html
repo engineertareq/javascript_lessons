@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="myForm" onsubmit="myWindow(event)">
+    <input type="text" name="name" placeholder="Name"><br>
+    <input type="tel" name="phone" placeholder="Phone"><br>
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="submit" name="submit" value="submit"><br>
+    
+  </form>
+  <script>
+    function myWindow() {
+      let form = document.getElementById("myForm");
+      let name = form.name.value;
+      let phone = form.phone.value;
+      let gender = form.gender.value;
+
+      let x = window.open("", "abc", "width=400,height=300");
+
+      let output = "";
+      output += "Name: " + name + "<br>";
+      output += "Phone: " + phone + "<br>";
+      output += "Gender: " + gender + "<br>";
+
+      x.document.write(output);
+    }
+  </script>
+</body>
+</html>
