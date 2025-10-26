@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Popup</title>
+</head>
+<body>
+    <script src="form_data.js"></script>
+    <form name="myform">
+        Name: <br>
+        <input type="text" placeholder="Enter Your Name" name="fullname"><br>
+        Address: <br>
+        <textarea name="address" placeholder="Enter Your Address"></textarea><br>
+        Phone: <br>
+        <input type="number" placeholder="Enter Your Phone" name="phone"><br>
+        <button type="button" onclick="callwindow()">Click To Open A New Window</button>
+    </form>
+
+    <script>
+        function callwindow() {
+            let fullname = document.myform.fullname.value;
+            let address = document.myform.address.value;
+            let phone = document.myform.phone.value;
+
+            const myobject = new MyFormData(fullname, address, phone);
+            let data = myobject.DataDisplay();
+
+            let mywindow = window.open("", "", "width=400,height=300");
+            mywindow.document.write(data);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prime Number Checker</title>
+</head>
+<body>
+  <script>
+    function primenumber(x) {
+      if (x == 0) {
+        return x + " is zero";
+      } else if (x == 1) {
+        return x + " is not a prime number";
+      } else if (x == 2) {
+        return x + " is a prime number";
+      } else {
+        for (let i = 2; i < x; i++) {
+          if (x % i == 0) {
+            return x + " is not a prime number";
+          }
+        }
+        return x + " is a prime number";
+      }
+    }
+    document.write(primenumber(prompt("Enter THE NUMBEr")));
+  </script>
+</body>
+</html>
