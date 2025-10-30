@@ -9,6 +9,10 @@
     <h3>Findinding Prime Number or Not</h3>
     <script>
        function CheckPrime(Number){
+        if(Number==0){
+            
+            return Number + " is Zero"
+        }
         if(Number==1){
             
             return Number + " is not a prime number"
@@ -26,12 +30,7 @@
         }
              return Number + " is a prime number"
        } 
-        // End of Function
-
-        //Call Function
-       
         document.write(CheckPrime(prompt("Enter the Number")));
-
     </script>
 </body>
 </html>
